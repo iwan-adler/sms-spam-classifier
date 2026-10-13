@@ -1,0 +1,110 @@
+{
+  "model_name": "linear SVM (words+chars, C=0.1)",
+  "threshold": 0.028197099541297455,
+  "score_type": "decision score",
+  "comparison": [
+    {
+      "model": "baseline: always ham",
+      "cv_pr_auc_mean": 0.12608083839318338,
+      "cv_pr_auc_se": 0.00019902508804527374,
+      "cv_threshold": 0.0,
+      "cv_precision": 0.12608101957214382,
+      "cv_recall": 1.0,
+      "cv_f1": 0.22392886014551333,
+      "cv_false_positive_rate": 1.0
+    },
+    {
+      "model": "baseline: keyword rule",
+      "cv_pr_auc_mean": 0.712914634127982,
+      "cv_pr_auc_se": 0.026330486444497994,
+      "cv_threshold": 2.0,
+      "cv_precision": 0.98,
+      "cv_recall": 0.44223826714801445,
+      "cv_f1": 0.6094527363184079,
+      "cv_false_positive_rate": 0.0013020833333333333
+    },
+    {
+      "model": "naive bayes (words)",
+      "cv_pr_auc_mean": 0.9686329025704096,
+      "cv_pr_auc_se": 0.003540580002410442,
+      "cv_threshold": 0.3234772150687468,
+      "cv_precision": 0.9803536345776032,
+      "cv_recall": 0.9007220216606499,
+      "cv_f1": 0.9388523047977423,
+      "cv_false_positive_rate": 0.0026041666666666665
+    },
+    {
+      "model": "linear SVM (words+chars, C=0.1)",
+      "cv_pr_auc_mean": 0.9826283926044663,
+      "cv_pr_auc_se": 0.004352584911572606,
+      "cv_threshold": 0.028197099541297455,
+      "cv_precision": 0.9809523809523809,
+      "cv_recall": 0.9296028880866426,
+      "cv_f1": 0.9545875810936052,
+      "cv_false_positive_rate": 0.0026041666666666665
+    },
+    {
+      "model": "logistic regression (words+chars, C=1)",
+      "cv_pr_auc_mean": 0.9812711533393802,
+      "cv_pr_auc_se": 0.004492852125347621,
+      "cv_threshold": 0.5779022275311835,
+      "cv_precision": 0.9807321772639692,
+      "cv_recall": 0.9187725631768953,
+      "cv_f1": 0.9487418452935694,
+      "cv_false_positive_rate": 0.0026041666666666665
+    },
+    {
+      "model": "linear SVM (words+chars, C=1)",
+      "cv_pr_auc_mean": 0.9826730552884013,
+      "cv_pr_auc_se": 0.0043060810481091415,
+      "cv_threshold": -0.09665203223058039,
+      "cv_precision": 0.9810606060606061,
+      "cv_recall": 0.9350180505415162,
+      "cv_f1": 0.9574861367837338,
+      "cv_false_positive_rate": 0.0026041666666666665
+    },
+    {
+      "model": "logistic regression (words+chars, C=10)",
+      "cv_pr_auc_mean": 0.9824001273896016,
+      "cv_pr_auc_se": 0.004289590338887675,
+      "cv_threshold": 0.555444357883381,
+      "cv_precision": 0.9809523809523809,
+      "cv_recall": 0.9296028880866426,
+      "cv_f1": 0.9545875810936052,
+      "cv_false_positive_rate": 0.0026041666666666665
+    },
+    {
+      "model": "logistic regression (words+chars, C=100)",
+      "cv_pr_auc_mean": 0.9825601584707451,
+      "cv_pr_auc_se": 0.0043886254126120254,
+      "cv_threshold": 0.42148949123900364,
+      "cv_precision": 0.9811320754716981,
+      "cv_recall": 0.9386281588447654,
+      "cv_f1": 0.959409594095941,
+      "cv_false_positive_rate": 0.0026041666666666665
+    }
+  ],
+  "test": {
+    "pr_auc": 0.9875225223458969,
+    "threshold": 0.028197099541297455,
+    "precision": 0.9411764705882353,
+    "recall": 0.9696969696969697,
+    "f1": 0.9552238805970149,
+    "accuracy": 0.9884169884169884,
+    "false_positive_rate": 0.008849557522123894,
+    "confusion_matrix": {
+      "tn": 672,
+      "fp": 6,
+      "fn": 3,
+      "tp": 96
+    }
+  },
+  "sizes": {
+    "raw": 5574,
+    "after_dedup": 5171,
+    "development": 4394,
+    "test": 777,
+    "spam_rate": 0.1263
+  },
+  "seed": 42
+}

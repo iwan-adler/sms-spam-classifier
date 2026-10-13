@@ -1,0 +1,95 @@
+{
+  "model_name": "logistic regression (words+chars, C=100)",
+  "threshold": 0.3124034717485116,
+  "score_type": "probability",
+  "comparison": [
+    {
+      "model": "logistic regression (words+chars, C=100)",
+      "validation_pr_auc": 0.9900653905980346,
+      "validation_precision": 0.9894736842105263,
+      "validation_recall": 0.9591836734693877,
+      "validation_f1": 0.9740932642487047,
+      "validation_false_positive_rate": 0.0014749262536873156
+    },
+    {
+      "model": "linear SVM (words+chars, C=1)",
+      "validation_pr_auc": 0.989988157415224,
+      "validation_precision": 0.9894736842105263,
+      "validation_recall": 0.9591836734693877,
+      "validation_f1": 0.9740932642487047,
+      "validation_false_positive_rate": 0.0014749262536873156
+    },
+    {
+      "model": "linear SVM (words+chars, C=0.1)",
+      "validation_pr_auc": 0.9898771383933672,
+      "validation_precision": 0.9895833333333334,
+      "validation_recall": 0.9693877551020408,
+      "validation_f1": 0.979381443298969,
+      "validation_false_positive_rate": 0.0014749262536873156
+    },
+    {
+      "model": "logistic regression (words+chars, C=10)",
+      "validation_pr_auc": 0.9880267817620575,
+      "validation_precision": 0.9894736842105263,
+      "validation_recall": 0.9591836734693877,
+      "validation_f1": 0.9740932642487047,
+      "validation_false_positive_rate": 0.0014749262536873156
+    },
+    {
+      "model": "logistic regression (words+chars, C=1)",
+      "validation_pr_auc": 0.986943965333336,
+      "validation_precision": 0.9895833333333334,
+      "validation_recall": 0.9693877551020408,
+      "validation_f1": 0.979381443298969,
+      "validation_false_positive_rate": 0.0014749262536873156
+    },
+    {
+      "model": "naive bayes (words)",
+      "validation_pr_auc": 0.9796486510136112,
+      "validation_precision": 0.9888888888888889,
+      "validation_recall": 0.9081632653061225,
+      "validation_f1": 0.9468085106382979,
+      "validation_false_positive_rate": 0.0014749262536873156
+    },
+    {
+      "model": "baseline: keyword rule",
+      "validation_pr_auc": 0.7623053860719545,
+      "validation_precision": 1.0,
+      "validation_recall": 0.4387755102040816,
+      "validation_f1": 0.6099290780141844,
+      "validation_false_positive_rate": 0.0
+    },
+    {
+      "model": "baseline: always ham",
+      "validation_pr_auc": 0.12628865979381443,
+      "validation_precision": 0.12628865979381443,
+      "validation_recall": 1.0,
+      "validation_f1": 0.2242562929061785,
+      "validation_false_positive_rate": 1.0
+    }
+  ],
+  "test": {
+    "pr_auc": 0.9874866136799599,
+    "threshold": 0.3124034717485116,
+    "precision": 0.9142857142857143,
+    "recall": 0.9696969696969697,
+    "f1": 0.9411764705882353,
+    "accuracy": 0.9845559845559846,
+    "false_positive_rate": 0.01327433628318584,
+    "confusion_matrix": {
+      "tn": 669,
+      "fp": 9,
+      "fn": 3,
+      "tp": 96
+    }
+  },
+  "sizes": {
+    "raw": 5574,
+    "after_dedup": 5171,
+    "train": 3618,
+    "validation": 776,
+    "test": 777,
+    "spam_rate": 0.1263
+  },
+  "seed": 42
+}

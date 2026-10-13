@@ -82,7 +82,7 @@ The first version used a single train/validation/test split and tuned the thresh
 - PR-AUC was stable (0.990 → 0.987), so the model's *ranking* generalised. The **threshold** didn't: it had been fitted to a small, noisy sample.
 - Model selection had also picked the *least* regularised model (C=100) by a margin of 0.001.
 
-I switched to 5-fold cross-validation on the development data, so the threshold now comes from about 555 out-of-fold spam predictions, and to the one-standard-error rule. Test precision improved to **0.941** with the same recall.
+I switched to 5-fold cross-validation on the development data, so the threshold now comes from 554 out-of-fold spam predictions, and to the one-standard-error rule. Test precision improved to **0.941** with the same recall.
 
 **Caveat:** I had already seen the test results once when I made this change. It was motivated by a methodological flaw, not by tuning to the test set, but the second test result isn't a perfectly untouched estimate. The test precision (0.941) is also still below the 98% target reached in cross-validation (0.981). With only about 100 predicted-spam test messages, 6 false positives instead of 2 is within plausible sampling noise, but I report it as a real gap rather than tuning further on test data.
 
@@ -128,8 +128,11 @@ curl -X POST http://127.0.0.1:8000/predict -H "Content-Type: application/json" \
 ```
 ```json
 {"label": "spam", "is_spam": true, "score": 1.1842, "score_type": "decision score", "threshold": 0.0282,
- "top_spam_features": [{"feature": "word: txt", "contribution": 0.3…}, {"feature": "word: you have", …},
-                       {"feature": "word: free", …}, {"feature": "word: claim", …}, {"feature": "word: won", …}]}
+ "top_spam_features": [{"feature": "word: txt", "contribution": 0.1378},
+                       {"feature": "word: you have", "contribution": 0.0987},
+                       {"feature": "word: free", "contribution": 0.0849},
+                       {"feature": "word: claim", "contribution": 0.0727},
+                       {"feature": "word: won", "contribution": 0.0723}]}
 ```
 
 | Endpoint | Purpose |

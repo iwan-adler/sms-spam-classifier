@@ -102,7 +102,7 @@ Word-based models struggle with this: *free*, *call* and *mobile* are strong spa
 
 ## Using it
 
-Requires Python 3.11 or newer; developed and tested on 3.14.
+Requires Python 3.12 or newer (NumPy 2.5 needs 3.12+); CI tests 3.12 and 3.14.
 
 ```bash
 git clone https://github.com/iwan-adler/sms-spam-classifier.git

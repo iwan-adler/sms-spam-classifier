@@ -1,5 +1,7 @@
 # SMS Spam Classifier
 
+[![tests](https://github.com/iwan-adler/sms-spam-classifier/actions/workflows/tests.yml/badge.svg)](https://github.com/iwan-adler/sms-spam-classifier/actions/workflows/tests.yml)
+
 A machine-learning project that classifies SMS messages as **spam** or **ham** (legitimate). It's built to show a careful evaluation process, not just a high accuracy number:
 - leakage-free data splitting
 - baselines to compare against
